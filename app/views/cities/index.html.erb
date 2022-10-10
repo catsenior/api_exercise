@@ -1,0 +1,12 @@
+<table class="table">
+<tr>
+  <th>縣市</th>
+  <th>最低溫</th>
+</tr>
+<% @cities.each do |city| %>
+  <tr>
+    <td><%= city.city %></td>
+    <td><%= city.current_temp %>℃<%= link_to "更新溫度", update_temp_city_path(city), method: :post %></td>
+  </tr>
+<% end %>
+</table>
